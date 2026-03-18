@@ -20,7 +20,7 @@ section .vid {
 
 section.sec1 {
   position: relative;
-  height: 500vh;
+  height: 450vh;
 }
 
 section .vid video {
@@ -39,6 +39,11 @@ section nav {
   color: white;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.40);
+  transition: 1s ease;
+}
+
+nav.nav-white {
+  background: #111;
 }
 
 .nav-links a {
@@ -58,6 +63,7 @@ section.sec1 .text .text1 {
   position: absolute;
   top: 0;
   z-index: 2;
+  height: 100%;
 }
 
 .page1 {
@@ -96,7 +102,6 @@ section.sec1 .text .text1 {
 
 
 .page2 {
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,7 +155,6 @@ section.sec1 .text .text1 {
 }
 
 .page3 {
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,7 +182,6 @@ section.sec1 .text .text1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
   padding: 6rem 5rem;
   backdrop-filter: blur(3px);
 }
@@ -202,8 +205,97 @@ section.sec1 .text .page1 button {
   border: 2px solid rgb(37, 36, 36);
 }
 
-.sec2 {
-  height: 100vh;
+.page5 {
   width: 100%;
   background-color: #111;
+}
+
+.page5 .scroll-effect {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #111;
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroll {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.sec2 {
+  background-color: #111;
+  padding: 6rem 4rem;
+  min-height: 100vh;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.gallery-header h2 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.gallery-header p {
+  font-size: 1rem;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.visits {
+  columns: 3;
+  column-gap: 1rem;
+}
+
+.visit-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.visit-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.visit-item:hover img {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 1.5rem 1.2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  color: white;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.visit-item:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay span {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
