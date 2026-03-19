@@ -246,7 +246,8 @@ section.sec1 .text .page1 button:hover {
 }
 
 .page5 .scroll-effect {
-  border: 1px solid white;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
   padding: 1.5rem 0;
   display: flex;
   align-items: center;
