@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis(
   {
-    duration: 1.2,
+    duration: 1.4,
     smooth: true
   }
 );
@@ -28,6 +28,23 @@ function navbar() {
 
     onLeaveBack: () => {
       document.querySelector("nav").classList.remove("nav-white");
+    }
+  });
+
+  window.addEventListener("wheel", (dets) => {
+    if (dets.deltaY > 0) {
+      gsap.to("nav", {
+        y: "-100%",
+        ease: "power1.out",
+        duration: 0.5
+      })
+    }
+    else {
+      gsap.to("nav", {
+        y: "0%",
+        ease: "power1.out",
+        duration: 0.5
+      })
     }
   });
 };
@@ -64,43 +81,69 @@ function scrollingEffect() {
 
 scrollingEffect();
 
-const ntg = document.querySelector('.resp-nav .ntg');
-const respnav = document.querySelector('.sec1 .resp-nav');
-const respMenu = document.querySelector('.resp-menu');
 
-let isOpen = false;
+function respNavbar() {
+  const ntg = document.querySelector('.resp-nav .ntg');
+  const respnav = document.querySelector('.sec1 .resp-nav');
+  const respMenu = document.querySelector('.resp-menu');
 
-respnav.addEventListener('click', () => {
+  let isOpen = false;
 
-  if (isOpen === false) {
-    ntg.style.opacity = '0';
-    respMenu.classList.toggle('open');
-    gsap.to(".first", {
-      rotation: 45,
-      y: 7,
-      duration: 0.3
-    });
-    gsap.to(".second", {
-      rotation: -45,
-      y: -7,
-      duration: 0.3
-    });
+  respnav.addEventListener('click', () => {
 
-    isOpen = true;
-  } else {
-    ntg.style.opacity = '1';
-    respMenu.classList.toggle('open');
-    gsap.to(".first", {
-      rotation: 0,
-      y: 0,
-      duration: 0.3
-    });
-    gsap.to(".second", {
-      rotation: 0,
-      y: 0,
-      duration: 0.3
-    });
+    if (isOpen === false) {
+      ntg.style.opacity = '0';
+      respMenu.classList.toggle('open');
+      gsap.to(".first", {
+        rotation: 45,
+        y: 7,
+        duration: 0.3
+      });
+      gsap.to(".second", {
+        rotation: -45,
+        y: -7,
+        duration: 0.3
+      });
 
-    isOpen = false;
-  }
-}); 
+      isOpen = true;
+    } else {
+      ntg.style.opacity = '1';
+      respMenu.classList.toggle('open');
+      gsap.to(".first", {
+        rotation: 0,
+        y: 0,
+        duration: 0.3
+      });
+      gsap.to(".second", {
+        rotation: 0,
+        y: 0,
+        duration: 0.3
+      });
+
+      isOpen = false;
+    }
+  });
+}
+respNavbar();
+
+
+function horizontalScroll() {
+  const track = document.querySelector('.sec2-track');
+
+  gsap.to(track, {
+    x: () => -(track.scrollWidth - window.innerWidth),
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.sec2',
+      start: 'top top',
+      end: () => '+=' + track.scrollWidth,
+      pin: true,
+      scrub: 1,
+      invalidateOnRefresh: true
+    }
+  });
+}
+
+if (window.innerWidth > 600) {
+  horizontalScroll();
+};

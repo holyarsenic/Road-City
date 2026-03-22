@@ -349,7 +349,151 @@ section.sec1 .text .page1 button:hover {
 
 .sec2 {
   background-color: #111;
-  padding: 6rem 4rem;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #ff8c00;
+}
+
+.sec2-header {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.sec2-header h2 {
+  font-size: 2rem;
+  color: #ff8c00;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.sec2-header p {
+  border-top: 1px solid white;
+  font-size: 1rem;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sec2-track {
+  display: flex;
+  width: max-content;
+}
+
+.sec2-panel {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-card {
+  width: 380px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s ease, border 0.4s ease;
+  cursor: pointer;
+}
+
+.panel-card:hover {
+  transform: scale(1.1);
+  border: 1px solid #ff8c00;
+}
+
+.card-vid {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-vid::after {
+  content: "";
+  position: absolute;
+  bottom: -1%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(to top, #111, transparent);
+}
+
+.card-vid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1.5rem;
+  border: none;
+  outline: none;
+}
+
+.card-tag {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff8c00;
+  margin-bottom: 0.6rem;
+}
+
+.card-info h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
+
+.card-info p {
+  font-size: 0.8rem;
+  opacity: 0.45;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.card-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-stats span {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  letter-spacing: 1px;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 0.65rem;
+  font-size: 0.7rem;
+  color: white;
+  background: transparent;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.card-btn:hover {
+  background: #ff8c00;
+  color: #111;
+}
+
+.sec3 {
+  background-color: #111;
+  padding: 6rem 1rem;
   min-height: 100vh;
 }
 
@@ -469,9 +613,6 @@ section.sec1 .text .page1 button:hover {
     font-size: 3rem;
   }
 
-  .sec2 {
-    padding: 4rem 2rem;
-  }
 }
 
 @media (max-width: 600px) {
@@ -632,16 +773,18 @@ section.sec1 .text .page1 button:hover {
     letter-spacing: 3px;
   }
 
-  .sec2 {
+  .sec3 {
     padding: 4rem 1.2rem;
   }
 
   .gallery-header h2 {
     font-size: 2rem;
+    width: 100vw;
   }
 
   .gallery-header p {
     font-size: 0.75rem;
+    width: 40vw;
   }
 
   .visits {
@@ -657,5 +800,117 @@ section.sec1 .text .page1 button:hover {
   .overlay span {
     font-size: 0.7rem;
     letter-spacing: 1px;
+  }
+
+  .sec2 {
+    overflow-x: hidden;
+  }
+
+  .sec2-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    padding: 2rem 1.5rem 1rem;
+  }
+
+  .sec2-track {
+    display: grid;
+    grid-template-columns: repeat(4, 75vw);
+    width: max-content;
+    gap: 1rem;
+    padding: 1rem 1.5rem 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .sec2-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sec2-panel {
+    width: 75vw;
+    height: auto;
+    padding: 0;
+    scroll-snap-align: start;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .panel-card {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 0.5px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    transform: none !important;
+    flex-direction: column;
+  }
+
+  .panel-card:hover {
+    transform: none;
+  }
+
+  .card-vid {
+    width: 100%;
+    height: 180px;
+    border-radius: 0;
+    position: relative;
+  }
+
+  .card-vid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+  }
+
+  .card-vid::after {
+    height: 50px;
+    background: linear-gradient(to top, rgba(20, 20, 20, 0.9), transparent);
+  }
+
+  .card-info {
+    padding: 1rem;
+    position: relative;
+    z-index: 3;
+  }
+
+  .card-tag {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.4rem;
+  }
+
+  .card-info h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .card-info p {
+    display: none;
+  }
+
+  .card-stats {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .card-stats span {
+    font-size: 0.65rem;
+    opacity: 0.35;
+  }
+
+  .card-btn {
+    width: 100%;
+    padding: 0.55rem;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    border-radius: 6px;
   }
 }
