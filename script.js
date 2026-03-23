@@ -144,6 +144,6 @@ function horizontalScroll() {
   });
 }
 
-if (window.innerWidth > 600) {
+if (window.innerWidth > 900) {
   horizontalScroll();
 };
