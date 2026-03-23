@@ -607,7 +607,6 @@ section.sec1 .text .page1 button:hover {
   text-transform: uppercase;
 }
 
-
 @media (max-width: 920px) {
   section nav {
     padding: 1.5rem 2rem;
@@ -647,78 +646,71 @@ section.sec1 .text .page1 button:hover {
     columns: 2;
   }
 
-
   .gallery-header {
-    display: block;
     width: 70%;
   }
 
   .gallery-header h2 {
-    font-size: 1.2rem;
-    width: 100%;
+    font-size: 1.5rem;
   }
 
   .gallery-header p {
-    font-size: 0.75rem;
-    width: 100%;
+    font-size: 0.85rem;
   }
+
 
   .sec2 {
-    height: 100vh;
+    overflow: hidden;
+  }
+
+  .sec2-track {
     overflow-x: auto;
-    overflow-y: hidden;
-  }
-
-  .sec2-header {
-    position: sticky;
-    width: 70%;
-    top: 11%;
-  }
-
-  .sec2-header h2 {
-    font-size: 1.2rem;
-    width: 100%;
-  }
-
-  .sec2-header p {
-    font-size: 0.75rem;
-    width: 100%;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
   .sec2-track::-webkit-scrollbar {
     display: none;
   }
 
-  .sec2-track {
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
-    scrollbar-width: none;
+  .sec2-header {
+    top: 8%;
+    left: 2%;
+  }
+
+  .sec2-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .sec2-header p {
+    font-size: 0.85rem;
   }
 
   .sec2-panel {
-    scroll-snap-align: start;
+    gap: 2rem;
+    padding: 0 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
   }
 
-  .panel-card .card-info .card-tag {
-    font-size: 0.7rem;
+  .sec2-panel:nth-child(1) {
+    padding-left: 3rem;
   }
 
-  .panel-card .card-info h2 {
-    font-size: 1rem;
-  }
-
-  .sec2-panel {
-    padding: 1rem 8rem;
+  .sec2-panel:nth-last-child(1) {
+    padding-left: 3rem;
+    justify-content: center;
   }
 
   .panel-card {
-    width: 30vw;
-    height: 60vh;
+    width: 300px;
+    height: 460px;
   }
 
   .card-img {
-    height: 160px;
+    height: 180px;
   }
 
   .sec2-footer {
@@ -727,7 +719,6 @@ section.sec1 .text .page1 button:hover {
 }
 
 @media (max-width: 600px) {
-
   section nav {
     padding: 1.2rem 1.5rem;
     position: fixed;
@@ -817,11 +808,7 @@ section.sec1 .text .page1 button:hover {
     flex-direction: column-reverse;
     padding: 8rem 1rem;
     gap: 2rem;
-    border-bottom: 1px rgb(255, 255, 255, 0.6) solid;
-  }
-
-  .page3 .left {
-    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   }
 
   .page3 .left h1 {
@@ -884,28 +871,25 @@ section.sec1 .text .page1 button:hover {
     letter-spacing: 3px;
   }
 
+  /* gallery */
   .sec3 {
     padding: 4rem 1.2rem;
   }
 
   .gallery-header {
-    display: block;
-    width: 70%;
+    width: 100%;
   }
 
   .gallery-header h2 {
     font-size: 1.2rem;
-    width: 100%;
   }
 
   .gallery-header p {
     font-size: 0.75rem;
-    width: 100%;
   }
 
   .visits {
     columns: 1;
-    column-gap: 0.5rem;
   }
 
   .visit-item {
@@ -918,6 +902,7 @@ section.sec1 .text .page1 button:hover {
     letter-spacing: 1px;
   }
 
+  /* sec2 mobile */
   .sec2 {
     height: 100vh;
     overflow-x: auto;
@@ -926,58 +911,78 @@ section.sec1 .text .page1 button:hover {
 
   .sec2-header {
     position: sticky;
-    width: 70%;
-    top: 11%;
+    top: 8%;
+    left: 1.5rem;
+    width: 80%;
   }
 
   .sec2-header h2 {
     font-size: 1.2rem;
-    width: 100%;
   }
 
   .sec2-header p {
     font-size: 0.75rem;
-    width: 100%;
+  }
+
+  .sec2-track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
   .sec2-track::-webkit-scrollbar {
     display: none;
   }
 
-  .sec2-track {
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
-    scrollbar-width: none;
-  }
-
   .sec2-panel {
+    width: 170vw;
     scroll-snap-align: start;
-  }
-
-  .panel-card .card-info .card-tag {
-    font-size: 0.7rem;
-  }
-
-  .panel-card .card-info h2 {
-    font-size: 1rem;
-  }
-
-  .sec2-panel {
-    width: 200vw;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
-    padding: 1rem 2rem;
+    padding-left: 2rem;
+    margin-top: 0;
+  }
+
+  .sec2-panel:nth-child(1) {
+    padding-left: 4rem;
+    justify-content: space-between;
+  }
+
+  .sec2-panel:nth-last-child(1) {
+    padding-left: 0.5rem;
+    justify-content: space-between;
   }
 
   .panel-card {
-    width: 80vw;
+    width: 70vw;
     height: 60vh;
+    flex-shrink: 0;
   }
 
   .card-img {
     height: 160px;
+  }
+
+  .card-info h2 {
+    font-size: 0.9rem;
+  }
+
+  .card-tag {
+    font-size: 0.6rem;
+  }
+
+  .card-stats span {
+    font-size: 0.6rem;
+  }
+
+  .card-btn {
+    font-size: 0.6rem;
+    padding: 0.5rem;
+  }
+
+  .sec2-footer {
+    display: none;
   }
 }
