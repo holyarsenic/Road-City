@@ -861,6 +861,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .sec2-panel {
+    width: 200vw;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -869,8 +870,8 @@ section.sec1 .text .page1 button:hover {
   }
 
   .panel-card {
-    width: 40vw;
-    height: 50vh;
+    width: 85vw;
+    height: 60vh;
   }
 
   .card-img {
