@@ -134,6 +134,7 @@ section .vid video {
 .text {
   width: 100%;
   background-color: rgba(17, 17, 17, 0.3);
+  backdrop-filter: blur(3px);
   color: rgba(221, 219, 219, 0.8);
   position: absolute;
   top: 0;
@@ -249,6 +250,7 @@ section.sec1 .text .page1 button:hover {
   align-items: center;
   padding: 6rem 5rem;
   backdrop-filter: blur(3px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .stats {
@@ -345,6 +347,11 @@ section.sec1 .text .page1 button:hover {
   font-weight: 300;
   letter-spacing: 4px;
   opacity: 0.9;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
 }
 
 .sec2 {
@@ -808,7 +815,6 @@ section.sec1 .text .page1 button:hover {
     flex-direction: column-reverse;
     padding: 8rem 1rem;
     gap: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   }
 
   .page3 .left h1 {
@@ -871,7 +877,6 @@ section.sec1 .text .page1 button:hover {
     letter-spacing: 3px;
   }
 
-  /* gallery */
   .sec3 {
     padding: 4rem 1.2rem;
   }
@@ -902,7 +907,6 @@ section.sec1 .text .page1 button:hover {
     letter-spacing: 1px;
   }
 
-  /* sec2 mobile */
   .sec2 {
     height: 100vh;
     overflow-x: auto;
@@ -963,6 +967,10 @@ section.sec1 .text .page1 button:hover {
 
   .card-img {
     height: 160px;
+  }
+
+  .card-img img {
+    height: 260px;
   }
 
   .card-info h2 {
