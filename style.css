@@ -133,8 +133,7 @@ section .vid video {
 
 .text {
   width: 100%;
-  background-color: rgba(17, 17, 17, 0.3);
-  backdrop-filter: blur(3px);
+  background-color: rgba(17, 17, 17, 0.5);
   color: rgba(221, 219, 219, 0.8);
   position: absolute;
   top: 0;
