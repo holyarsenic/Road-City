@@ -114,7 +114,6 @@ nav.nav-white {
 section.sec1 {
   position: relative;
   height: 400vh;
-  margin-bottom: 4rem;
   background: #111;
 }
 
@@ -299,7 +298,8 @@ section.sec1 .text .page1 button:hover {
   color: #111;
 }
 
-.page5 {
+.page-marq {
+  margin-top: 5rem;
   width: 100%;
   background-color: #111;
   overflow: hidden;
@@ -313,13 +313,13 @@ section.sec1 .text .page1 button:hover {
   width: max-content;
 }
 
-.page5 .scroll-effect {
+.page-marq .scroll-effect {
   display: flex;
   align-items: center;
   gap: 3rem;
   padding: 1.5rem 2rem;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid #ff8c00;
+  border-bottom: 1px solid #ff8c00;
   background-color: #111;
   flex-shrink: 0;
   will-change: transform;
@@ -349,8 +349,15 @@ section.sec1 .text .page1 button:hover {
 }
 
 .hero {
+  height: 600vh;
+  width: 100%;
+  padding: 0rem 7rem;
+}
+
+.hero img {
   height: 100vh;
   width: 100%;
+  background-size: cover;
 }
 
 .sec2 {
