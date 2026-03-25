@@ -349,13 +349,80 @@ section.sec1 .text .page1 button:hover {
 }
 
 .hero {
-  height: 600vh;
   width: 100%;
-  padding: 0rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #ff8c00;
 }
 
-.hero img {
-  height: 100vh;
+
+.hero-header {
+  width: 80%;
+  text-align: left;
+  position: sticky;
+  top: 0%;
+}
+
+.hero-header h2 {
+  font-size: 2rem;
+  color: #ff8c00;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.hero-header p {
+  width: 50%;
+  border-top: 1px solid white;
+  font-size: 0.7rem;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.hero .explore {
+  margin-top: 1rem;
+  height: 70vh;
+  width: 80%;
+  position: sticky;
+  top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #111;
+  border-top: 1px solid #ff8c00;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.hero .explore .countries {
+  height: 100%;
+  width: 40%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hero .explore .explore-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .explore .explore-content h2 {
+  font-size: 4rem;
+  text-align: left;
+}
+
+.hero .explore .countries img {
+  height: 100%;
   width: 100%;
   background-size: cover;
 }
@@ -369,11 +436,8 @@ section.sec1 .text .page1 button:hover {
 
 .sec2-header {
   position: absolute;
-  top: 12%;
-  left: 2%;
-  z-index: 2;
-  background-color: rgb(17, 17, 17, 0.2);
-  padding: 1rem;
+  top: 3%;
+  left: 1%;
 }
 
 .sec2-header h2 {
@@ -398,7 +462,7 @@ section.sec1 .text .page1 button:hover {
 }
 
 .sec2-panel {
-  width: 100vw;
+  width: 40vw;
   height: 100vh;
   flex-shrink: 0;
   display: flex;
@@ -409,12 +473,11 @@ section.sec1 .text .page1 button:hover {
 }
 
 .sec2-panel:nth-child(1) {
-  padding-left: 35rem;
+  margin-left: 30vw;
 }
 
 .sec2-panel:nth-last-child(1) {
-  padding-left: 0;
-  justify-content: left;
+  margin-right: 30vw;
 }
 
 .panel-card {
@@ -671,9 +734,25 @@ section.sec1 .text .page1 button:hover {
     font-size: 0.85rem;
   }
 
-
   .sec2 {
-    overflow: hidden;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .sec2-header {
+    position: sticky;
+    top: 8%;
+    left: 1.5rem;
+    width: 80%;
+  }
+
+  .sec2-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .sec2-header p {
+    font-size: 0.75rem;
   }
 
   .sec2-track {
@@ -687,36 +766,6 @@ section.sec1 .text .page1 button:hover {
     display: none;
   }
 
-  .sec2-header {
-    top: 8%;
-    left: 2%;
-  }
-
-  .sec2-header h2 {
-    font-size: 1.5rem;
-  }
-
-  .sec2-header p {
-    font-size: 0.85rem;
-  }
-
-  .sec2-panel {
-    gap: 2rem;
-    padding: 0 3rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-  }
-
-  .sec2-panel:nth-child(1) {
-    padding-left: 3rem;
-  }
-
-  .sec2-panel:nth-last-child(1) {
-    padding-left: 3rem;
-    justify-content: center;
-  }
-
   .panel-card {
     width: 300px;
     height: 460px;
@@ -728,6 +777,45 @@ section.sec1 .text .page1 button:hover {
 
   .sec2-footer {
     display: none;
+  }
+
+  .hero {
+    padding: 2rem 2rem;
+  }
+
+  .hero-header {
+    width: 100%;
+  }
+
+  .hero-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-header p {
+    width: 70%;
+    font-size: 0.65rem;
+  }
+
+  .hero .explore {
+    width: 100%;
+    height: 80vh;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    top: 13%;
+  }
+
+  .hero .explore .countries {
+    width: 50%;
+    height: 60%;
+  }
+
+  .hero .explore .explore-content {
+    width: 100%;
+  }
+
+  .hero .explore .explore-content h2 {
+    font-size: 2.5rem;
   }
 }
 
@@ -946,23 +1034,15 @@ section.sec1 .text .page1 button:hover {
   }
 
   .sec2-panel {
-    width: 170vw;
-    scroll-snap-align: start;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2rem;
-    margin-top: 0;
+    width: 100vw;
   }
 
   .sec2-panel:nth-child(1) {
-    padding-left: 4rem;
-    justify-content: space-between;
+    margin-left: 0.5rem;
   }
 
   .sec2-panel:nth-last-child(1) {
-    padding-left: 0.5rem;
-    justify-content: space-between;
+    margin-right: 0.5rem;
   }
 
   .panel-card {
@@ -998,5 +1078,52 @@ section.sec1 .text .page1 button:hover {
 
   .sec2-footer {
     display: none;
+  }
+
+  .hero {
+    padding: 1.5rem 1.2rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .hero-header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: #111;
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-header h2 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-header p {
+    width: 100%;
+    font-size: 0.6rem;
+  }
+
+  .hero .explore {
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    top: 11%;
+  }
+
+  .hero .explore .countries {
+    width: 100%;
+    height: 60%;
+  }
+
+  .hero .explore .explore-content {
+    width: 100%;
+  }
+
+  .hero .explore .explore-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ff8c00;
   }
 }
