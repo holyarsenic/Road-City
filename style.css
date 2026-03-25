@@ -1019,7 +1019,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .sec2-header p {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .sec2-track {
@@ -1046,7 +1046,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .panel-card {
-    width: 70vw;
+    width: 80vw;
     height: 60vh;
     flex-shrink: 0;
   }
@@ -1124,6 +1124,5 @@ section.sec1 .text .page1 button:hover {
   .hero .explore .explore-content h2 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    color: #ff8c00;
   }
 }
