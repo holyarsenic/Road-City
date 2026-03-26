@@ -33,9 +33,9 @@ I designed and coded everything myself — from the sticky scroll effect to the 
 
 ## Run
 
-git clone https://github.com/holyarsenic/Animated-Site
+git clone https://github.com/holyarsenic/Road-City
 
-run - https://holyarsenic.github.io/Animated-Site/
+run - https://holyarsenic.github.io/Road-City/
 
 ---
 
