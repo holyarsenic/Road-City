@@ -358,7 +358,6 @@ section.sec1 .text .page1 button:hover {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid #ff8c00;
 }
 
 
@@ -379,7 +378,7 @@ section.sec1 .text .page1 button:hover {
 .hero-header p {
   width: 50%;
   border-top: 1px solid white;
-  font-size: 0.7rem;
+  font-size: 1rem;
   opacity: 0.5;
   margin-top: 0.5rem;
   text-transform: uppercase;
@@ -399,6 +398,7 @@ section.sec1 .text .page1 button:hover {
   gap: 1rem;
   background-color: #111;
   border-top: 1px solid #ff8c00;
+  border-bottom: 1px solid #ff8c00;
   border-radius: 10px;
   padding: 2rem;
 }
@@ -438,6 +438,7 @@ section.sec1 .text .page1 button:hover {
   position: absolute;
   top: 3%;
   left: 1%;
+  z-index: 2;
 }
 
 .sec2-header h2 {
@@ -482,7 +483,7 @@ section.sec1 .text .page1 button:hover {
 
 .panel-card {
   width: 380px;
-  height: 520px;
+  height: 510px;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -491,10 +492,10 @@ section.sec1 .text .page1 button:hover {
   transition: transform 0.4s ease, border 0.4s ease;
   cursor: pointer;
   flex-shrink: 0;
+  margin-top: 1rem;
 }
 
 .panel-card:hover {
-  transform: scale(1.1);
   border: 1px solid #ff8c00;
 }
 
@@ -1019,7 +1020,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .sec2-header p {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 
   .sec2-track {
@@ -1049,6 +1050,7 @@ section.sec1 .text .page1 button:hover {
     width: 80vw;
     height: 60vh;
     flex-shrink: 0;
+    border-color: rgb(255, 140, 0, 0.3);
   }
 
   .card-img {
@@ -1100,7 +1102,7 @@ section.sec1 .text .page1 button:hover {
 
   .hero-header p {
     width: 100%;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
 
   .hero .explore {

@@ -129,9 +129,10 @@ respNavbar();
 function herosection() {
 
   gsap.to(".card1", {
-    scale: 0.7,
+    scale: 0.6,
     opacity: 0,
-    duration: 1,
+    y: 100,
+    duration: 1.2,
     scrollTrigger: {
       trigger: ".card1",
       start: "top 15%",
@@ -140,8 +141,9 @@ function herosection() {
     }
   });
   gsap.to(".card2", {
-    scale: 0.7,
+    scale: 0.6,
     opacity: 0,
+    y: 100,
     duration: 1,
     scrollTrigger: {
       trigger: ".card2",
@@ -151,8 +153,9 @@ function herosection() {
     }
   });
   gsap.to(".card3", {
-    scale: 0.7,
+    scale: 0.6,
     opacity: 0,
+    y: 100,
     duration: 1,
     scrollTrigger: {
       trigger: ".card3",
@@ -162,8 +165,9 @@ function herosection() {
     }
   });
   gsap.to(".card4", {
-    scale: 0.7,
+    scale: 0.6,
     opacity: 0,
+    y: 100,
     duration: 1,
     scrollTrigger: {
       trigger: ".card4",
@@ -172,9 +176,7 @@ function herosection() {
       scrub: true
     }
   });
-  gsap.to(".card5", {
-    scale: 1.2,
-    duration: 1,
+  const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".card5",
       start: "top 15%",
@@ -182,15 +184,28 @@ function herosection() {
       scrub: true
     }
   });
+
+  tl.to(".hero .hero-header", {
+    opacity: 0
+  })
+
+    .to(".card5", {
+      scale: 1.1
+    })
+
+    .to(".card5 img", {
+      scale: 1.4
+    }, 0);
 }
+
 
 herosection();
 
 
 function horizontalScroll() {
   const track = document.querySelector('.sec2-track');
-
-  gsap.to(track, {
+  const cards = document.querySelectorAll('.panel-card');
+  const mainScroll = gsap.to(track, {
     x: () => -(track.scrollWidth - window.innerWidth),
     ease: 'none',
     scrollTrigger: {
@@ -202,7 +217,27 @@ function horizontalScroll() {
       invalidateOnRefresh: true
     }
   });
+
+  cards.forEach(card => {
+    gsap.fromTo(card,
+      { scale: 0.7 },
+      {
+        scale: 1,
+        yoyo: true,
+        repeat: 1,
+        ease: 'power1.inOut',
+        scrollTrigger: {
+          trigger: card,
+          containerAnimation: mainScroll,
+          start: 'left 80%',
+          end: 'right 20%',
+          scrub: true,
+        }
+      }
+    )
+  });
 }
+
 
 if (window.innerWidth > 900) {
   horizontalScroll();
