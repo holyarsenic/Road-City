@@ -242,3 +242,17 @@ function horizontalScroll() {
 if (window.innerWidth > 900) {
   horizontalScroll();
 };
+
+
+const button = document.querySelector(".contact-bottom")
+
+button.addEventListener("click", () => {
+  const n = document.querySelector('.cont-num').value.trim();
+  const e = document.querySelector('.cont-email').value.trim();
+  if (!n || !e) return;
+  document.querySelector('.contact-ok').classList.add('show');
+  document.querySelector('.cont-num').value = '';
+  document.querySelector('.cont-email').value = '';
+  document.querySelector('.contact-ta').value = '';
+}
+)

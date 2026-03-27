@@ -299,7 +299,6 @@ section.sec1 .text .page1 button:hover {
 }
 
 .page-marq {
-  margin-top: 5rem;
   width: 100%;
   background-color: #111;
   overflow: hidden;
@@ -318,11 +317,8 @@ section.sec1 .text .page1 button:hover {
   align-items: center;
   gap: 3rem;
   padding: 1.5rem 2rem;
-  border-top: 1px solid #ff8c00;
-  border-bottom: 1px solid #ff8c00;
   background-color: #111;
   flex-shrink: 0;
-  will-change: transform;
 }
 
 .marquee-track .scroll-effect .scroll img {
@@ -342,7 +338,7 @@ section.sec1 .text .page1 button:hover {
 }
 
 .scroll h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 4px;
   opacity: 0.9;
@@ -371,6 +367,7 @@ section.sec1 .text .page1 button:hover {
 .hero-header h2 {
   font-size: 2rem;
   color: #ff8c00;
+  text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
 }
@@ -444,6 +441,7 @@ section.sec1 .text .page1 button:hover {
 .sec2-header h2 {
   font-size: 2rem;
   color: #ff8c00;
+  text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
 }
@@ -592,6 +590,7 @@ section.sec1 .text .page1 button:hover {
 .sec2-footer h2 {
   font-size: 2rem;
   color: #ff8c00;
+  text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
   text-align: end;
@@ -610,6 +609,7 @@ section.sec1 .text .page1 button:hover {
   background-color: #111;
   padding: 6rem 1rem;
   min-height: 100vh;
+  border-bottom: 1px dotted white;
 }
 
 .gallery-header {
@@ -620,7 +620,9 @@ section.sec1 .text .page1 button:hover {
 
 .gallery-header h2 {
   font-size: 2rem;
-  color: #ff8c00;
+  -webkit-text-stroke: 1px #ff8c00;
+  color: transparent;
+  text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
 }
@@ -683,6 +685,154 @@ section.sec1 .text .page1 button:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+.contact {
+  background: #111;
+  min-height: 100vh;
+  color: white;
+  padding: 5rem 3rem;
+  border-top: 1px dotted white;
+}
+
+.contact-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.contact-title {
+  font-size: 6vw;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.contact-title span {
+  -webkit-text-stroke: 1px #ff8c00;
+  color: transparent;
+}
+
+.contact-cards {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card {
+  padding: 2rem;
+}
+
+.contact-card-title {
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card-val {
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.contact-form-row {
+  width: 80%;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form-full {
+  border: 1px solid white;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+.contact-inp {
+  border: 1px solid white;
+  background-color: transparent;
+  width: 100%;
+  padding: 1.8rem 2rem;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.contact-inp::placeholder {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.contact-ta {
+  background: #0a0a0a;
+  border: none;
+  outline: none;
+  width: 50%;
+  padding: 1.8rem 2rem;
+  font-size: 0.95rem;
+  color: white;
+  resize: none;
+  height: 130px;
+}
+
+.contact-ta::placeholder {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.link {
+  font-size: 2rem;
+  color: #ff8c00;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-bottom {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff8c00;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-bottom:hover {
+  background: white;
+}
+
+.contact-bottom span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: 2px;
+}
+
+.contact-bottom div {
+  font-size: 1.4rem;
+  color: #0a0a0a;
+}
+
+.contact-ok {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  color: #ff8c00;
+  text-transform: uppercase;
+  display: none;
+}
+
+.contact-ok.show {
+  display: block;
+}
+
 
 @media (max-width: 920px) {
   section nav {
@@ -817,6 +967,58 @@ section.sec1 .text .page1 button:hover {
 
   .hero .explore .explore-content h2 {
     font-size: 2.5rem;
+  }
+
+  .contact {
+    padding: 2rem 1rem;
+  }
+
+  .contact-top {
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card {
+    padding: 0.9rem 1rem;
+  }
+
+  .contact-form-row {
+    width: 100%;
+  }
+
+  .contact-inp {
+    padding: 1rem 0.5rem;
+  }
+
+  .cont-num {
+    width: 30%;
+  }
+
+  .cont-email {
+    width: 70%;
+  }
+
+  .contact-form-full {
+    width: 100%;
+  }
+
+  .contact-ta {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .contact-container .link {
+    font-size: 1.4rem;
+  }
+
+  .contact-bottom {
+    height: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
