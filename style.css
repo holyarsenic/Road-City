@@ -385,8 +385,8 @@ section.sec1 .text .page1 button:hover {
 
 .hero .explore {
   margin-top: 1rem;
-  height: 70vh;
-  width: 80%;
+  height: 80vh;
+  width: 90%;
   position: sticky;
   top: 15%;
   display: flex;
@@ -493,9 +493,6 @@ section.sec1 .text .page1 button:hover {
   margin-top: 1rem;
 }
 
-.panel-card:hover {
-  border: 1px solid #ff8c00;
-}
 
 .card-img {
   width: 100%;
@@ -610,6 +607,7 @@ section.sec1 .text .page1 button:hover {
   padding: 6rem 1rem;
   min-height: 100vh;
   border-bottom: 1px dotted white;
+  overflow: hidden;
 }
 
 .gallery-header {
@@ -685,6 +683,83 @@ section.sec1 .text .page1 button:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+.gallery-view {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgb(17, 17, 17, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+.gallery-view .left-button {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  display: flex;
+  left: 25%;
+  color: white;
+  font-size: 3rem;
+  z-index: 101;
+}
+
+.gallery-view .right-button {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  display: flex;
+  font-size: 3rem;
+  color: white;
+  right: 25%;
+  z-index: 101;
+}
+
+.gallery-view .pics-view {
+  width: 40vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.gallery-view .pics-view .picture1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.gallery-view .pics-view img {
+  width: 40vw;
+  height: 80vh;
+  background-size: cover;
+}
+
+.gallery-view button {
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+}
+
+.gallery-view {
+  display: none;
+}
+
 
 .contact {
   background: #111;
@@ -885,6 +960,36 @@ section.sec1 .text .page1 button:hover {
     font-size: 0.85rem;
   }
 
+
+  .gallery-view .left-button {
+    left: 5%;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .gallery-view .right-button {
+    font-size: 2rem;
+    color: white;
+    right: 5%;
+  }
+
+  .gallery-view .pics-view {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+  }
+
+
+  .gallery-view .pics-view img {
+    width: 90vw;
+    height: 80vh;
+    background-size: cover;
+  }
+
+  .gallery-view button {
+    bottom: 3%;
+  }
+
   .sec2 {
     height: 100vh;
     overflow-x: auto;
@@ -969,6 +1074,7 @@ section.sec1 .text .page1 button:hover {
     font-size: 2.5rem;
   }
 
+
   .contact {
     padding: 2rem 1rem;
   }
@@ -984,7 +1090,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .contact-card {
-    padding: 0.9rem 1rem;
+    padding: 0.7rem 0rem;
   }
 
   .contact-form-row {
@@ -1204,6 +1310,35 @@ section.sec1 .text .page1 button:hover {
     letter-spacing: 1px;
   }
 
+  .gallery-view .left-button {
+    left: 5%;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .gallery-view .right-button {
+    font-size: 2rem;
+    color: white;
+    right: 5%;
+  }
+
+  .gallery-view .pics-view {
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+  }
+
+
+  .gallery-view .pics-view img {
+    width: 90vw;
+    height: 60vh;
+    background-size: cover;
+  }
+
+  .gallery-view button {
+    bottom: 3%;
+  }
+
   .sec2 {
     height: 100vh;
     overflow-x: auto;
@@ -1252,7 +1387,7 @@ section.sec1 .text .page1 button:hover {
     width: 80vw;
     height: 60vh;
     flex-shrink: 0;
-    border-color: rgb(255, 140, 0, 0.3);
+    border-color: rgb(255, 140, 0);
   }
 
   .card-img {
