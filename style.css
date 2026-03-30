@@ -184,7 +184,6 @@ section.sec1 .text .page1 button {
   font-size: 0.75rem;
   color: white;
   background-color: rgba(74, 72, 72, 0.32);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
   letter-spacing: 1px;
   transition: all ease 0.6s;
@@ -841,13 +840,14 @@ section.sec1 .text .page1 button:hover {
   background: #0a0a0a;
   border: none;
   outline: none;
-  width: 50%;
+  width: 100%;
   padding: 1.8rem 2rem;
   font-size: 0.95rem;
   color: white;
   resize: none;
   height: 130px;
 }
+
 
 .contact-ta::placeholder {
   color: rgba(255, 255, 255, 0.18);
@@ -1077,6 +1077,12 @@ section.sec1 .text .page1 button:hover {
 
   .contact {
     padding: 2rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 8vw;
+    font-weight: 900;
+    line-height: 1;
   }
 
   .contact-top {
@@ -1464,4 +1470,5 @@ section.sec1 .text .page1 button:hover {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
   }
+
 }
