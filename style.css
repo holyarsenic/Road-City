@@ -895,17 +895,23 @@ section.sec1 .text .page1 button:hover {
 }
 
 .contact-ok {
+  margin-top: 1rem;
+  position: absolute;
+  right: 10%;
   text-align: center;
-  padding: 1rem;
+  padding: 0.4rem;
   font-size: 0.75rem;
-  letter-spacing: 3px;
-  color: #ff8c00;
+  font-weight: 600;
+  color: black;
+  background-color: aliceblue;
+  border-radius: 10px;
   text-transform: uppercase;
   display: none;
 }
 
 .contact-ok.show {
   display: block;
+  transition: 1s all ease;
 }
 
 
@@ -1077,6 +1083,7 @@ section.sec1 .text .page1 button:hover {
 
   .contact {
     padding: 2rem 1rem;
+    position: relative;
   }
 
   .contact-title {
@@ -1131,6 +1138,12 @@ section.sec1 .text .page1 button:hover {
   .contact-bottom {
     height: 2rem;
     margin-bottom: 1rem;
+  }
+
+  .contact-ok {
+    position: absolute;
+    right: 10%;
+    top: 10%;
   }
 }
 

@@ -251,7 +251,13 @@ button.addEventListener("click", () => {
   const n = document.querySelector('.cont-num').value.trim();
   const e = document.querySelector('.cont-email').value.trim();
   if (!n || !e) return;
-  document.querySelector('.contact-ok').classList.add('show');
+  setTimeout(() => {
+    document.querySelector('.contact-ok').classList.add('show');
+
+    setTimeout(() => {
+      document.querySelector('.contact-ok').classList.remove('show');
+    }, 3000);
+  }, 700);
   document.querySelector('.cont-num').value = '';
   document.querySelector('.cont-email').value = '';
   document.querySelector('.contact-ta').value = '';
