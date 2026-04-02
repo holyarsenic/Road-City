@@ -81,21 +81,81 @@ nav button {
   width: 70vw;
   padding: 1rem 2rem;
   border-radius: 30px;
+  position: relative;
 }
 
 .book h2 {
-  font-size: 2vw;
+  font-size: 1.7vw;
+}
+
+.book .search {
+  position: relative;
+}
+
+.book .search i {
+  position: absolute;
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  color: black;
+  top: 0%;
 }
 
 .book-bg .book input {
   width: 100%;
   border: none;
   border-bottom: 1px solid #5d0101;
+  outline: none;
   margin-top: 0.6rem;
-  padding: 0.1rem 0.3rem;
+  padding: 0.1rem 1.5rem;
 }
 
-@media (max-width:960px) {
+.book button {
+  position: absolute;
+  bottom: -10%;
+  padding: 0.5rem 1.4rem;
+  border: none;
+  outline: none;
+  background-color: #cd0404;
+  color: white;
+  font-weight: 300;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.view .stac {
+  background-color: #2a0000;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  display: flex;
+  gap: 2rem;
+  border: 2px solid white;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+}
+
+.view-pt h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.stac .view-pt {
+  display: flex;
+  gap: 1rem;
+}
+
+.view .stac .view-pt img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+@media (max-width:1200px) {
   nav {
     padding: 1.5rem 2rem;
   }
@@ -123,6 +183,11 @@ nav button {
     height: 25vh;
     width: 85vw;
     padding: 0.5rem 1.5rem;
+  }
+
+  .view-pt h2 {
+    font-weight: 600;
+    font-size: 1rem;
   }
 }
 
@@ -154,6 +219,7 @@ nav button {
     gap: 2rem;
     height: 60vh;
     width: 70vw;
+    border-radius: 5px;
   }
 
   .book h2 {
@@ -161,6 +227,46 @@ nav button {
   }
 
   .book-bg .book input {
-    width: 50vw;
+    width: 60vw;
   }
+
+  .book button {
+    bottom: -4%;
+  }
+
+
+  .view .stac {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: none;
+    box-shadow: none;
+  }
+
+  .view-pt h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .stac .view-pt {
+    display: flex;
+    background-color: #2a0000;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    display: flex;
+    gap: 2rem;
+    border: 2px solid white;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+    gap: 1rem;
+  }
+
+  .view .stac .view-pt img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
 }

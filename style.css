@@ -183,14 +183,16 @@ section.sec1 .text .page1 button {
   padding: 0.6rem 1.2rem;
   font-size: 0.75rem;
   color: white;
-  background-color: rgba(74, 72, 72, 0.32);
+  background-color: transparent;
+  border: 1px solid white;
   cursor: pointer;
   letter-spacing: 1px;
   transition: all ease 0.6s;
 }
 
 section.sec1 .text .page1 button:hover {
-  background-color: rgba(104, 102, 102, 0.15);
+  background-color: white;
+  color: #111;
 }
 
 .page2 {
