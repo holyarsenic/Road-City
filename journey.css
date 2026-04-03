@@ -242,6 +242,13 @@ nav button {
   border-bottom: none;
 }
 
+.link {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
 
 @media (max-width:1200px) {
   nav {

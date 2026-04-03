@@ -42,21 +42,18 @@ function navbar() {
     }
   });
 
-  window.addEventListener("wheel", (dets) => {
-    if (dets.deltaY > 0) {
-      gsap.to("nav", {
-        y: "-100%",
-        ease: "power1.out",
-        duration: 0.5
-      })
-    }
-    else {
-      gsap.to("nav", {
-        y: "0%",
-        ease: "power1.out",
-        duration: 0.5
-      })
-    }
+  let lastY = 0;
+
+  window.addEventListener("scroll", () => {
+    let currentY = window.scrollY;
+
+    gsap.to("nav", {
+      y: currentY > lastY ? "-100%" : "0%",
+      duration: 0.5,
+      ease: "power1.out"
+    });
+
+    lastY = currentY;
   });
 };
 
