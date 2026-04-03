@@ -322,6 +322,7 @@ nav button {
     bottom: -4%;
     color: white;
     font-size: 1.1rem;
+    font-weight: 600;
   }
 
 
@@ -360,7 +361,11 @@ nav button {
   }
 
   .contest {
-    padding: 0.5rem 0.3rem;
+    padding: 2rem 1.4rem;
+  }
+
+  .contest .doc {
+    width: 100%;
   }
 
   .doc h3 {
