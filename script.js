@@ -19,7 +19,7 @@ function intro() {
     y: "100%",
     ease: "power1.out",
     duration: 1,
-    delay: 1
+    delay: 1.5
   })
 }
 
