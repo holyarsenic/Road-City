@@ -14,6 +14,17 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+function intro() {
+  gsap.to(".main .intro", {
+    y: "100%",
+    ease: "power1.out",
+    duration: 1,
+    delay: 1
+  })
+}
+
+intro();
+
 
 
 function navbar() {

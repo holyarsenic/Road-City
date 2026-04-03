@@ -13,6 +13,22 @@ body {
   color: white;
 }
 
+.main .intro {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.main .intro h1 {
+  font-size: 3.5rem;
+}
+
 section nav {
   position: fixed;
   width: 100%;
@@ -918,6 +934,11 @@ section.sec1 .text .page1 button:hover {
 
 
 @media (max-width: 920px) {
+  .main .intro h1 {
+    font-size: 3rem;
+  }
+
+
   section nav {
     padding: 1.5rem 2rem;
   }
@@ -1150,6 +1171,11 @@ section.sec1 .text .page1 button:hover {
 }
 
 @media (max-width: 600px) {
+  .main .intro h1 {
+    font-size: 2rem;
+  }
+
+
   section nav {
     padding: 1.2rem 1.5rem;
     position: fixed;
