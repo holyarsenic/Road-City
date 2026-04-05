@@ -885,6 +885,10 @@ section.sec1 .text .page1 button:hover {
   justify-content: space-between;
 }
 
+.link a {
+  color: #ff8c00;
+}
+
 .contact-bottom {
   width: 50%;
   display: flex;

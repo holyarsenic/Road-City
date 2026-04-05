@@ -250,6 +250,10 @@ nav button {
   color: white;
 }
 
+.link a {
+  color: white;
+}
+
 @media (max-width:1200px) {
   nav {
     padding: 1.5rem 2rem;
