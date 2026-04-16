@@ -37,6 +37,65 @@ nav button {
   border-radius: 20px;
 }
 
+.sign-in {
+  height: 100vh;
+  width: 100%;
+  background-color: #11111174;
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in .acc-sign {
+  height: 60%;
+  width: 20%;
+  background-color: #5d0101;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in .acc-sign input {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.btn-sign {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-sign p {
+  font-size: 0.6rem;
+}
+
+.btn-sign button {
+  padding: 0.4rem 0.7rem;
+}
+
+.acc-sign .new-acc {
+  width: 70%;
+  margin-top: 1.5rem;
+}
+
+.acc-sign .new-acc p {
+  font-size: 0.8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
 .img-bg {
   margin-top: 5rem;
   width: 100%;
