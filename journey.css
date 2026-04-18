@@ -37,6 +37,14 @@ nav button {
   border-radius: 20px;
 }
 
+.sign-in.sign-popup {
+  display: flex;
+}
+
+.sign-btn {
+  cursor: pointer;
+}
+
 .sign-in {
   height: 100vh;
   width: 100%;
