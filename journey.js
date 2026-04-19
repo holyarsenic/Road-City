@@ -14,3 +14,22 @@ signinPage.addEventListener("click", () => {
 accSignin.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+const user = document.querySelector(".user input");
+const password = document.querySelector(".pass input");
+const loginBtn = document.querySelector(".signin-btn1");
+
+loginBtn.addEventListener("click", () => {
+  if (user.value === '') {
+    alert("Add Email First!");
+    user.focus();
+  } else if (password.value === '') {
+    alert("Add Password First!");
+    password.focus();
+  } else {
+    signinPage.classList.remove("sign-popup");
+  }
+
+  user.value = '';
+  password.value = '';
+});
