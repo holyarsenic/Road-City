@@ -58,6 +58,10 @@ nav button {
   justify-content: center;
 }
 
+.img-sign h3 {
+  font-size: 2rem;
+}
+
 .sign-in .acc-sign {
   height: 350px;
   width: 300px;
