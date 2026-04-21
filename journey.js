@@ -21,10 +21,10 @@ const loginBtn = document.querySelector(".signin-btn1");
 
 loginBtn.addEventListener("click", () => {
   if (user.value === '') {
-    alert("Add Email First!");
+    alert("Enter any valid Email");
     user.focus();
   } else if (password.value === '') {
-    alert("Add Password First!");
+    alert("Enter your Password");
     password.focus();
   } else {
     signinPage.classList.remove("sign-popup");
