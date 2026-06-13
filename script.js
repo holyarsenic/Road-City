@@ -94,8 +94,27 @@ function respNavbar() {
   const ntg = document.querySelector('.resp-nav .ntg');
   const respnav = document.querySelector('.sec1 .resp-nav');
   const respMenu = document.querySelector('.resp-menu');
+  const respClick = document.querySelector('.resp-menu .resp-click');
 
   let isOpen = false;
+
+  respClick.addEventListener("click", () => {
+    ntg.style.opacity = '1';
+    respMenu.classList.remove('open');
+    gsap.to(".first", {
+      rotation: 0,
+      y: 0,
+      duration: 0.3
+    });
+    gsap.to(".second", {
+      rotation: 0,
+      y: 0,
+      duration: 0.3
+    });
+
+    isOpen = false;
+  })
+
 
   respnav.addEventListener('click', () => {
 
