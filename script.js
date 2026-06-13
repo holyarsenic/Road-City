@@ -252,26 +252,6 @@ if (window.innerWidth > 900) {
   horizontalScroll();
 };
 
-
-const button = document.querySelector(".contact-bottom")
-
-button.addEventListener("click", () => {
-  const n = document.querySelector('.cont-num').value.trim();
-  const e = document.querySelector('.cont-email').value.trim();
-  if (!n || !e) return;
-  setTimeout(() => {
-    document.querySelector('.contact-ok').classList.add('show');
-
-    setTimeout(() => {
-      document.querySelector('.contact-ok').classList.remove('show');
-    }, 3000);
-  }, 700);
-  document.querySelector('.cont-num').value = '';
-  document.querySelector('.cont-email').value = '';
-  document.querySelector('.contact-ta').value = '';
-}
-);
-
 function galleryButton() {
 
   const galleryView = document.querySelector(".gallery-view");
