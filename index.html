@@ -494,26 +494,27 @@
             <div class="contact-card-val">24 / 7 Worldwide</div>
           </div>
         </div>
-
-        <div class="contact-form-row">
-          <input class="contact-inp cont-num" placeholder="Your name" />
-          <input class="contact-inp cont-email" type="email" placeholder="Email address" />
-        </div>
-        <div class="contact-form-full">
-          <textarea class="contact-ta" placeholder="Tell us about your journey.."></textarea>
-        </div>
-        <div class="contact-container">
-          <div class="contact-bottom">
-            <span>Send Message</span>
-            <div>→</div>
+        <form action="https://formsubmit.co/your@email.com" method="POST">
+          <div class="contact-form-row">
+            <input class="contact-inp cont-num" name="Name" placeholder="Your name" required />
+            <input class="contact-inp cont-email" name="Email" type="email" placeholder="Email address" required />
           </div>
-          <div class="link">
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <a href="https://github.com/holyarsenic"> <i class="fa-brands fa-github"> </i></a>
+          <div class="contact-form-full">
+            <textarea class="contact-ta" name="feedback" placeholder="Tell us about your journey.." required></textarea>
           </div>
-        </div>
-        <div class="contact-ok">✓ Sent! We'll reply soon.</div>
+          <div class="contact-container">
+            <div class="contact-bottom">
+              <button type="submit">Send Message</button>
+              <div>→</div>
+            </div>
+            <div class="link">
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://github.com/holyarsenic"> <i class="fa-brands fa-github"> </i></a>
+            </div>
+          </div>
+          <div class="contact-ok">✓ Sent! We'll reply soon.</div>
+        </form>
       </div>
     </section>
 

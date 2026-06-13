@@ -891,11 +891,10 @@ section.sec1 .text .page1 button:hover {
 
 .contact-bottom {
   width: 50%;
+  height: 90px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: #ff8c00;
-  padding: 1.5rem 2rem;
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -904,11 +903,16 @@ section.sec1 .text .page1 button:hover {
   background: white;
 }
 
-.contact-bottom span {
+.contact-bottom button {
   font-size: 0.8rem;
   font-weight: 700;
   color: #0a0a0a;
   letter-spacing: 2px;
+  border: none;
+  outline: none;
+  width: 90%;
+  height: 100%;
+  background-color: transparent;
 }
 
 .contact-bottom div {
@@ -1163,7 +1167,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .contact-bottom {
-    height: 2rem;
+    height: 3rem;
     margin-bottom: 1rem;
   }
 
