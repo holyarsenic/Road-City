@@ -13,16 +13,77 @@ body {
   color: white;
 }
 
+:root {
+  /*Colors*/
+  --bg-primary: #111;
+  --bg-secondary: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(221, 219, 219, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.18);
+  --accent: #ff8c00;
+
+  /*Border*/
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-medium: rgba(255, 255, 255, 0.2);
+  --border-dark: rgba(255, 255, 255, 0.08);
+
+  /*glass*/
+  --glass-bg: rgba(0, 0, 0, 0.4);
+  --glass-nav: rgba(0, 0, 0, 0.40);
+  --glass-menu: rgba(17, 17, 17, 0.85);
+  --glass-overlay: rgba(17, 17, 17, 0.8);
+
+  /*Radius*/
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /*Blur*/
+  --blur-sm: 4px;
+  --blur-md: 20px;
+  --blur-lg: 50px;
+
+  /*Transition*/
+  --transition-fast: 0.3s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.6s ease;
+  --transition-xslow: 1s ease;
+
+  /*Font Sizes*/
+  --fs-xs: 0.6rem;
+  --fs-sm: 0.8rem;
+  --fs-base: 1rem;
+  --fs-md: 1.2rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 3rem;
+  --fs-3xl: 4rem;
+  --fs-4xl: 5rem;
+
+  /*Spacing*/
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /*Z Index*/
+  --z-nav: 100;
+  --z-menu: 90;
+  --z-overlay: 1000;
+}
+
 .main .intro {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background-color: #111;
-  color: white;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: var(--z-overlay);
 }
 
 .main .intro h1 {
@@ -32,37 +93,36 @@ body {
 section nav {
   position: fixed;
   width: 100%;
-  padding: 2rem 4rem;
+  padding: var(--space-md) var(--space-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.40);
-  backdrop-filter: blur(4px);
-  transition: background-color 1s ease;
+  color: var(--text-primary);
+  z-index: var(--z-nav);
+  background-color: var(--glass-nav);
+  backdrop-filter: blur(var(--blur-sm));
+  transition: background-color var(--transition-xslow);
 }
 
 nav.nav-white {
-  background: #111;
+  background: var(--bg-primary);
 }
 
 .resp-menu {
   height: 100%;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: var(--space-md) var(--space-sm);
   position: absolute;
-  z-index: 90;
-  background-color: rgb(17, 17, 17, 0.85);
-  backdrop-filter: blur(4px);
+  z-index: var(--z-menu);
+  background-color: var(--glass-menu);
+  backdrop-filter: blur(var(--blur-sm));
   position: fixed;
   display: flex;
   opacity: 0;
   align-items: center;
   opacity: 0;
   transform: translateY(-100%);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 .resp-menu.open {
@@ -80,11 +140,11 @@ nav.nav-white {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  color: rgba(221, 219, 219, 0.8);
+  font-size: var(--fs-lg);
+  margin-top: var(--space-sm);
+  color: var(--text-secondary);
   border-bottom: 1px rgba(221, 219, 219, 0.3) solid;
-  transition: color 0.6s ease;
+  transition: color var(--transition-slow);
 }
 
 .resp-click a:hover {
@@ -94,7 +154,7 @@ nav.nav-white {
 .resp-click a:hover h3 {
   transform: translateY(10px);
   margin-right: 10px;
-  transition: treansform 0.4s ease;
+  transition: treansform var(--transition-normal);
 }
 
 .resp-click h3 {
@@ -103,9 +163,9 @@ nav.nav-white {
 }
 
 .nav-links a {
-  margin-left: 2rem;
+  margin-left: var(--space-md);
   text-decoration: none;
-  color: white;
+  color: var(--text-primary);
   font-size: 0.9rem;
 }
 
@@ -119,18 +179,18 @@ nav.nav-white {
 .resp-nav span {
   width: 24px;
   height: 2px;
-  background: white;
-  transition: 0.3s;
+  background: var(--text-primary);
+  transition: var(--transition-fast);
 }
 
 .resp-nav .ntg {
-  transition: all 1s ease;
+  transition: all var(--transition-xslow);
 }
 
 section.sec1 {
   position: relative;
   height: 400vh;
-  background: #111;
+  background: var(--bg-primary);
 }
 
 section .vid {
@@ -148,8 +208,8 @@ section .vid video {
 
 .text {
   width: 100%;
-  background-color: rgba(17, 17, 17, 0.5);
-  color: rgba(221, 219, 219, 0.8);
+  background-color: var(--glass-overlay);
+  color: var(--text-secondary);
   position: absolute;
   top: 0;
   z-index: 2;
@@ -166,25 +226,25 @@ section.sec1 .text .text1 {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  padding: 4rem;
+  padding: var(--space-lg);
 }
 
 .page1 h1 {
-  font-size: 5rem;
+  font-size: var(--fs-4xl);
   letter-spacing: 3px;
 }
 
 .page1 p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
+  font-size: var(--fs-md);
+  margin-top: var(--space-sm);
   line-height: 1.6;
   opacity: 0.85;
-  border-top: 2px solid rgba(221, 219, 219, 0.8);
-  padding-top: 1rem;
+  border-top: 2px solid var(--text-secondary);
+  padding-top: var(--space-sm);
 }
 
 .cta {
-  margin-top: 2rem;
+  margin-top: var(--space-md);
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -198,31 +258,31 @@ section.sec1 .text .text1 {
 section.sec1 .text .page1 button {
   padding: 0.6rem 1.2rem;
   font-size: 0.75rem;
-  color: white;
+  color: var(--text-primary);
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid var(--text-primary);
   cursor: pointer;
   letter-spacing: 1px;
-  transition: all ease 0.6s;
+  transition: all ease var(--transition-slow);
 }
 
 section.sec1 .text .page1 button:hover {
-  background-color: white;
-  color: #111;
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 .page2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem 5rem;
+  padding: var(--space-xl) 5rem;
   backdrop-filter: blur(3px);
 }
 
 .left {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-sm);
   width: 50%;
 }
 
@@ -232,7 +292,7 @@ section.sec1 .text .page1 button:hover {
 }
 
 .left h3 {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   opacity: 0.6;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -240,14 +300,14 @@ section.sec1 .text .page1 button:hover {
 
 .right {
   width: 40%;
-  font-size: 1.2rem;
+  font-size: var(--fs-md);
   line-height: 1.7;
   opacity: 0.85;
-  padding: 2rem;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.40);
-  backdrop-filter: blur(50px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-lg));
+  border: 1px solid var(--border-light);
 }
 
 .page2 ul {
@@ -263,15 +323,15 @@ section.sec1 .text .page1 button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem 5rem;
+  padding: var(--space-xl) 5rem;
   backdrop-filter: blur(3px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .stats {
   display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 .stats div {
@@ -281,11 +341,11 @@ section.sec1 .text .page1 button:hover {
 }
 
 .stats h2 {
-  font-size: 2rem;
+  font-size: var(--fs-xl);
 }
 
 .stats span {
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   opacity: 0.6;
 }
 
@@ -295,29 +355,29 @@ section.sec1 .text .page1 button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 6rem 5rem;
+  padding: var(--space-xl) 5rem;
   backdrop-filter: blur(3px);
 }
 
 .final-btn {
-  margin-top: 2rem;
+  margin-top: var(--space-md);
   padding: 0.8rem 2rem;
-  border: 1px solid white;
+  border: 1px solid var(--text-primary);
   background: transparent;
-  color: white;
+  color: var(--text-primary);
   cursor: pointer;
   letter-spacing: 1px;
-  transition: all 0.3s, color 0.3s;
+  transition: all var(--transition-fast), color var(--transition-fast);
 }
 
 .final-btn:hover {
-  background: white;
-  color: #111;
+  background: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 .page-marq {
   width: 100%;
-  background-color: #111;
+  background-color: var(--bg-primary);
   overflow: hidden;
   position: relative;
 }
@@ -333,29 +393,29 @@ section.sec1 .text .page1 button:hover {
   display: flex;
   align-items: center;
   gap: 3rem;
-  padding: 1.5rem 2rem;
-  background-color: #111;
+  padding: 1.5rem var(--space-md);
+  background-color: var(--bg-primary);
   flex-shrink: 0;
 }
 
 .marquee-track .scroll-effect .scroll img {
   height: 7vh;
   width: 100%;
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
 }
 
 .scroll {
   flex-shrink: 0;
   white-space: nowrap;
-  color: white;
+  color: var(--text-primary);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: var(--space-md);
 }
 
 .scroll h1 {
-  font-size: 1.5rem;
+  font-size: var(--fs-lg);
   font-weight: 300;
   letter-spacing: 4px;
   opacity: 0.9;
@@ -367,10 +427,10 @@ section.sec1 .text .page1 button:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-sm);
   position: relative;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-lg);
 }
 
 
@@ -382,8 +442,8 @@ section.sec1 .text .page1 button:hover {
 }
 
 .hero-header h2 {
-  font-size: 2rem;
-  color: #ff8c00;
+  font-size: var(--fs-xl);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
@@ -391,17 +451,17 @@ section.sec1 .text .page1 button:hover {
 
 .hero-header p {
   width: 50%;
-  border-top: 1px solid white;
-  font-size: 1rem;
+  border-top: 1px solid var(--text-primary);
+  font-size: var(--fs-base);
   opacity: 0.5;
-  margin-top: 0.5rem;
+  margin-top: var(--space-xs);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 
 .hero .explore {
-  margin-top: 1rem;
+  margin-top: var(--space-sm);
   height: 80vh;
   width: 90%;
   position: sticky;
@@ -409,19 +469,19 @@ section.sec1 .text .page1 button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  background-color: #111;
-  border-top: 1px solid #ff8c00;
-  border-bottom: 1px solid #ff8c00;
-  border-radius: 10px;
-  padding: 2rem;
+  gap: var(--space-sm);
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
 }
 
 .hero .explore .countries {
   height: 100%;
   width: 40%;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
 }
 
 .hero .explore .explore-content {
@@ -431,7 +491,7 @@ section.sec1 .text .page1 button:hover {
 }
 
 .hero .explore .explore-content h2 {
-  font-size: 4rem;
+  font-size: var(--fs-3xl);
   text-align: left;
 }
 
@@ -442,10 +502,10 @@ section.sec1 .text .page1 button:hover {
 }
 
 .sec2 {
-  background-color: #111;
+  background-color: var(--bg-primary);
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid #ff8c00;
+  border-bottom: 1px solid var(--accent);
 }
 
 .sec2-header {
@@ -456,18 +516,18 @@ section.sec1 .text .page1 button:hover {
 }
 
 .sec2-header h2 {
-  font-size: 2rem;
-  color: #ff8c00;
+  font-size: var(--fs-xl);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
 }
 
 .sec2-header p {
-  border-top: 1px solid white;
-  font-size: 1rem;
+  border-top: 1px solid var(--text-primary);
+  font-size: var(--fs-base);
   opacity: 0.5;
-  margin-top: 0.5rem;
+  margin-top: var(--space-xs);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -485,7 +545,7 @@ section.sec1 .text .page1 button:hover {
   align-items: center;
   justify-content: center;
   gap: 10rem;
-  margin-top: 1rem;
+  margin-top: var(--space-sm);
 }
 
 .sec2-panel:nth-child(1) {
@@ -499,15 +559,15 @@ section.sec1 .text .page1 button:hover {
 .panel-card {
   width: 380px;
   height: 510px;
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.4s ease, border 0.4s ease;
+  border: 0.5px solid var(--border-light);
+  transition: transform var(--transition-normal), border var(--transition-normal);
   cursor: pointer;
   flex-shrink: 0;
-  margin-top: 1rem;
+  margin-top: var(--space-sm);
 }
 
 
@@ -525,7 +585,7 @@ section.sec1 .text .page1 button:hover {
   left: 0;
   height: 50%;
   width: 100%;
-  background: linear-gradient(to top, #111, transparent);
+  background: linear-gradient(to top, var(--bg-primary), transparent);
 }
 
 .card-img img {
@@ -541,10 +601,10 @@ section.sec1 .text .page1 button:hover {
 }
 
 .card-tag {
-  font-size: 0.65rem;
+  font-size: var(--fs-xs);
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #ff8c00;
+  color: var(--accent);
   margin-bottom: 0.6rem;
 }
 
@@ -556,18 +616,18 @@ section.sec1 .text .page1 button:hover {
 }
 
 .card-info p {
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   opacity: 0.45;
   line-height: 1.7;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
 }
 
 .card-stats {
   display: flex;
-  gap: 1rem;
+  gap: var(--space-sm);
   margin-bottom: 1.2rem;
-  padding-bottom: 1rem;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: var(--space-sm);
+  border-bottom: 0.5px solid var(--border-dark);
 }
 
 .card-stats span {
@@ -580,19 +640,19 @@ section.sec1 .text .page1 button:hover {
   width: 100%;
   padding: 0.65rem;
   font-size: 0.7rem;
-  color: white;
+  color: var(--text-primary);
   background: transparent;
-  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border: 0.5px solid var(--border-medium);
   cursor: pointer;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: all 0.3s ease;
-  border-radius: 4px;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-sm);
 }
 
 .card-btn:hover {
-  background: #ff8c00;
-  color: #111;
+  background: var(--accent);
+  color: var(--bg-primary);
 }
 
 .sec2-footer {
@@ -602,8 +662,8 @@ section.sec1 .text .page1 button:hover {
 }
 
 .sec2-footer h2 {
-  font-size: 2rem;
-  color: #ff8c00;
+  font-size: var(--fs-xl);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 600;
@@ -611,19 +671,19 @@ section.sec1 .text .page1 button:hover {
 }
 
 .sec2-footer p {
-  border-top: 1px solid white;
-  font-size: 1rem;
+  border-top: 1px solid var(--text-primary);
+  font-size: var(--fs-base);
   opacity: 0.5;
-  margin-top: 0.5rem;
+  margin-top: var(--space-xs);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .sec3 {
-  background-color: #111;
-  padding: 6rem 1rem;
+  background-color: var(--bg-primary);
+  padding: var(--space-xl) var(--space-sm);
   min-height: 100vh;
-  border-bottom: 1px dotted white;
+  border-bottom: 1px dotted var(--text-primary);
   overflow: hidden;
 }
 
@@ -634,8 +694,8 @@ section.sec1 .text .page1 button:hover {
 }
 
 .gallery-header h2 {
-  font-size: 2rem;
-  -webkit-text-stroke: 1px #ff8c00;
+  font-size: var(--fs-xl);
+  -webkit-text-stroke: 1px var(--accent);
   color: transparent;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -643,25 +703,25 @@ section.sec1 .text .page1 button:hover {
 }
 
 .gallery-header p {
-  border-top: 1px solid white;
-  font-size: 1rem;
+  border-top: 1px solid var(--text-primary);
+  font-size: var(--fs-base);
   opacity: 0.5;
-  margin-top: 0.5rem;
+  margin-top: var(--space-xs);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .visits {
   columns: 3;
-  column-gap: 1rem;
+  column-gap: var(--space-sm);
 }
 
 .visit-item {
   break-inside: avoid;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-sm);
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   cursor: pointer;
 }
 
@@ -670,7 +730,7 @@ section.sec1 .text .page1 button:hover {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: all 0.6s ease;
+  transition: all var(--transition-slow);
 }
 
 .visit-item:hover img {
@@ -682,12 +742,12 @@ section.sec1 .text .page1 button:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 1.5rem 1.2rem;
+  padding: var(--space-md) 1.5rem 1.2rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
-  color: white;
+  color: var(--text-primary);
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.4s ease;
+  transition: all var(--transition-normal);
 }
 
 .visit-item:hover .overlay {
@@ -711,9 +771,9 @@ section.sec1 .text .page1 button:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: rgb(17, 17, 17, 0.8);
-  backdrop-filter: blur(4px);
-  z-index: 100;
+  background-color: var(--glass-overlay);
+  backdrop-filter: blur(var(--blur-sm));
+  z-index: var(--z-nav);
 }
 
 .gallery-view .left-button {
@@ -722,8 +782,8 @@ section.sec1 .text .page1 button:hover {
   position: absolute;
   display: flex;
   left: 25%;
-  color: white;
-  font-size: 3rem;
+  color: var(--text-primary);
+  font-size: var(--fs-2xl);
   z-index: 101;
 }
 
@@ -732,8 +792,8 @@ section.sec1 .text .page1 button:hover {
   width: 50px;
   position: absolute;
   display: flex;
-  font-size: 3rem;
-  color: white;
+  font-size: var(--fs-2xl);
+  color: var(--text-primary);
   right: 25%;
   z-index: 101;
 }
@@ -770,7 +830,7 @@ section.sec1 .text .page1 button:hover {
   right: 10%;
   font-size: 0.7rem;
   padding: 0.2rem 0.5rem;
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
 }
 
 .gallery-view {
@@ -779,11 +839,11 @@ section.sec1 .text .page1 button:hover {
 
 
 .contact {
-  background: #111;
+  background: var(--bg-primary);
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
   padding: 5rem 3rem;
-  border-top: 1px dotted white;
+  border-top: 1px dotted var(--text-primary);
 }
 
 .contact-top {
@@ -799,76 +859,76 @@ section.sec1 .text .page1 button:hover {
 }
 
 .contact-title span {
-  -webkit-text-stroke: 1px #ff8c00;
+  -webkit-text-stroke: 1px var(--accent);
   color: transparent;
 }
 
 .contact-cards {
   width: 50%;
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .contact-card {
-  padding: 2rem;
+  padding: var(--space-md);
 }
 
 .contact-card-title {
   font-size: 0.7rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: white;
-  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
 }
 
 .contact-card-val {
-  font-size: 1rem;
-  color: white;
+  font-size: var(--fs-base);
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .contact-form-row {
   width: 80%;
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .contact-form-full {
-  border: 1px solid white;
-  margin-bottom: 1rem;
+  border: 1px solid var(--text-primary);
+  margin-bottom: var(--space-sm);
   width: 50%;
 }
 
 .contact-inp {
-  border: 1px solid white;
+  border: 1px solid var(--text-primary);
   background-color: transparent;
   width: 100%;
-  padding: 1.8rem 2rem;
+  padding: 1.8rem var(--space-md);
   font-size: 0.95rem;
-  color: white;
+  color: var(--text-primary);
 }
 
 .contact-inp::placeholder {
-  color: rgba(255, 255, 255, 0.18);
+  color: var(--text-muted);
 }
 
 .contact-ta {
-  background: #0a0a0a;
+  background: var(--bg-secondary);
   border: none;
   outline: none;
   width: 100%;
-  padding: 1.8rem 2rem;
+  padding: 1.8rem var(--space-md);
   font-size: 0.95rem;
-  color: white;
+  color: var(--text-primary);
   resize: none;
   height: 130px;
 }
 
 
 .contact-ta::placeholder {
-  color: rgba(255, 255, 255, 0.18);
+  color: var(--text-muted);
 }
 
 .contact-container {
@@ -877,8 +937,8 @@ section.sec1 .text .page1 button:hover {
 }
 
 .link {
-  font-size: 2rem;
-  color: #ff8c00;
+  font-size: var(--fs-xl);
+  color: var(--accent);
   width: 30%;
   display: flex;
   align-items: center;
@@ -886,7 +946,7 @@ section.sec1 .text .page1 button:hover {
 }
 
 .link a {
-  color: #ff8c00;
+  color: var(--accent);
 }
 
 .contact-bottom {
@@ -894,19 +954,19 @@ section.sec1 .text .page1 button:hover {
   height: 90px;
   display: flex;
   align-items: center;
-  background: #ff8c00;
+  background: var(--accent);
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background var(--transition-fast);
 }
 
 .contact-bottom:hover {
-  background: white;
+  background: var(--text-primary);
 }
 
 .contact-bottom button {
-  font-size: 0.8rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
-  color: #0a0a0a;
+  color: var(--bg-secondary);
   letter-spacing: 2px;
   border: none;
   outline: none;
@@ -917,11 +977,11 @@ section.sec1 .text .page1 button:hover {
 
 .contact-bottom div {
   font-size: 1.4rem;
-  color: #0a0a0a;
+  color: var(--bg-secondary);
 }
 
 .contact-ok {
-  margin-top: 1rem;
+  margin-top: var(--space-sm);
   position: absolute;
   right: 10%;
   text-align: center;
@@ -930,25 +990,25 @@ section.sec1 .text .page1 button:hover {
   font-weight: 600;
   color: black;
   background-color: aliceblue;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   text-transform: uppercase;
   display: none;
 }
 
 .contact-ok.show {
   display: block;
-  transition: 1s all ease;
+  transition: var(--transition-xslow) all ease;
 }
 
 
 @media (max-width: 920px) {
   .main .intro h1 {
-    font-size: 3rem;
+    font-size: var(--fs-2xl);
   }
 
 
   section nav {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem var(--space-md);
   }
 
   .page1 {
@@ -962,14 +1022,14 @@ section.sec1 .text .page1 button:hover {
 
   .page2 {
     flex-direction: column;
-    gap: 2rem;
-    padding: 4rem 2rem;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-md);
   }
 
   .page3 {
     flex-direction: column-reverse;
-    gap: 2rem;
-    padding: 4rem 2rem;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-md);
   }
 
   .left,
@@ -978,7 +1038,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .page4 {
-    padding: 4rem 2rem;
+    padding: var(--space-lg) var(--space-md);
   }
 
   .visits {
@@ -990,7 +1050,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .gallery-header h2 {
-    font-size: 1.5rem;
+    font-size: var(--fs-lg);
   }
 
   .gallery-header p {
@@ -1000,13 +1060,13 @@ section.sec1 .text .page1 button:hover {
 
   .gallery-view .left-button {
     left: 5%;
-    color: white;
-    font-size: 2rem;
+    color: var(--text-primary);
+    font-size: var(--fs-xl);
   }
 
   .gallery-view .right-button {
-    font-size: 2rem;
-    color: white;
+    font-size: var(--fs-xl);
+    color: var(--text-primary);
     right: 5%;
   }
 
@@ -1041,7 +1101,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .sec2-header h2 {
-    font-size: 1.2rem;
+    font-size: var(--fs-md);
   }
 
   .sec2-header p {
@@ -1073,7 +1133,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .hero {
-    padding: 2rem 2rem;
+    padding: var(--space-md);
   }
 
   .hero-header {
@@ -1086,7 +1146,7 @@ section.sec1 .text .page1 button:hover {
 
   .hero-header p {
     width: 70%;
-    font-size: 0.65rem;
+    font-size: var(--fs-xs);
   }
 
   .hero .explore {
@@ -1113,7 +1173,7 @@ section.sec1 .text .page1 button:hover {
 
 
   .contact {
-    padding: 2rem 1rem;
+    padding: var(--space-md) var(--space-sm);
     position: relative;
   }
 
@@ -1125,12 +1185,12 @@ section.sec1 .text .page1 button:hover {
 
   .contact-top {
     align-items: flex-start;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
   }
 
   .contact-cards {
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
   }
 
   .contact-card {
@@ -1142,7 +1202,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .contact-inp {
-    padding: 1rem 0.5rem;
+    padding: var(--space-sm) var(--space-xs);
   }
 
   .cont-num {
@@ -1159,7 +1219,7 @@ section.sec1 .text .page1 button:hover {
 
   .contact-ta {
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: var(--space-sm) var(--space-xs);
   }
 
   .contact-container .link {
@@ -1168,7 +1228,7 @@ section.sec1 .text .page1 button:hover {
 
   .contact-bottom {
     height: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-sm);
   }
 
   .contact-ok {
@@ -1180,7 +1240,7 @@ section.sec1 .text .page1 button:hover {
 
 @media (max-width: 600px) {
   .main .intro h1 {
-    font-size: 2rem;
+    font-size: var(--fs-xl);
   }
 
 
@@ -1199,9 +1259,9 @@ section.sec1 .text .page1 button:hover {
 
   .nav-links a {
     margin-left: 0;
-    font-size: 1rem;
+    font-size: var(--fs-base);
     padding: 0.4rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border-dark);
   }
 
   .resp-nav {
@@ -1210,7 +1270,7 @@ section.sec1 .text .page1 button:hover {
 
   .page1 {
     width: 100%;
-    padding: 1rem;
+    padding: var(--space-sm);
     justify-content: flex-end;
     padding-bottom: 8rem;
   }
@@ -1227,7 +1287,7 @@ section.sec1 .text .page1 button:hover {
 
   .cta {
     margin-top: 1.2rem;
-    gap: 1rem;
+    gap: var(--space-sm);
     flex-wrap: wrap;
   }
 
@@ -1236,14 +1296,14 @@ section.sec1 .text .page1 button:hover {
   }
 
   section.sec1 .text .page1 button {
-    padding: 0.5rem 1rem;
+    padding: var(--space-xs) var(--space-sm);
     font-size: 0.65rem;
   }
 
   .page2 {
     flex-direction: column;
-    padding: 7rem 1rem;
-    gap: 2rem;
+    padding: 7rem var(--space-sm);
+    gap: var(--space-md);
   }
 
   .left {
@@ -1265,14 +1325,14 @@ section.sec1 .text .page1 button:hover {
   }
 
   .page2 ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-xs);
     font-size: 0.85rem;
   }
 
   .page3 {
     flex-direction: column-reverse;
-    padding: 8rem 1rem;
-    gap: 2rem;
+    padding: 8rem var(--space-sm);
+    gap: var(--space-md);
   }
 
   .page3 .left h1 {
@@ -1295,8 +1355,8 @@ section.sec1 .text .page1 button:hover {
   .stats div {
     align-items: center;
     flex: 1;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0 0.5rem;
+    border-right: 1px solid var(--border-dark);
+    padding: 0 var(--space-xs);
   }
 
   .stats div:last-child {
@@ -1308,7 +1368,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .stats span {
-    font-size: 0.6rem;
+    font-size: var(--fs-xs);
     text-align: center;
   }
 
@@ -1317,7 +1377,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .page4 h1 {
-    font-size: 2rem;
+    font-size: var(--fs-xl);
   }
 
   .page4 p {
@@ -1331,12 +1391,12 @@ section.sec1 .text .page1 button:hover {
   }
 
   .scroll h1 {
-    font-size: 2rem;
+    font-size: var(--fs-xl);
     letter-spacing: 3px;
   }
 
   .sec3 {
-    padding: 4rem 1.2rem;
+    padding: var(--space-lg) 1.2rem;
   }
 
   .gallery-header {
@@ -1344,7 +1404,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .gallery-header h2 {
-    font-size: 1.2rem;
+    font-size: var(--fs-md);
   }
 
   .gallery-header p {
@@ -1356,8 +1416,8 @@ section.sec1 .text .page1 button:hover {
   }
 
   .visit-item {
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
+    margin-bottom: var(--space-xs);
+    border-radius: var(--radius-md);
   }
 
   .overlay span {
@@ -1367,13 +1427,13 @@ section.sec1 .text .page1 button:hover {
 
   .gallery-view .left-button {
     left: 5%;
-    color: white;
-    font-size: 2rem;
+    color: var(--text-primary);
+    font-size: var(--fs-xl);
   }
 
   .gallery-view .right-button {
-    font-size: 2rem;
-    color: white;
+    font-size: var(--fs-xl);
+    color: var(--text-primary);
     right: 5%;
   }
 
@@ -1408,7 +1468,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .sec2-header h2 {
-    font-size: 1.2rem;
+    font-size: var(--fs-md);
   }
 
   .sec2-header p {
@@ -1431,18 +1491,18 @@ section.sec1 .text .page1 button:hover {
   }
 
   .sec2-panel:nth-child(1) {
-    margin-left: 0.5rem;
+    margin-left: var(--space-xs);
   }
 
   .sec2-panel:nth-last-child(1) {
-    margin-right: 0.5rem;
+    margin-right: var(--space-xs);
   }
 
   .panel-card {
     width: 80vw;
     height: 60vh;
     flex-shrink: 0;
-    border-color: rgb(255, 140, 0);
+    border-color: var(--accent);
   }
 
   .card-img {
@@ -1458,16 +1518,16 @@ section.sec1 .text .page1 button:hover {
   }
 
   .card-tag {
-    font-size: 0.6rem;
+    font-size: var(--fs-xs);
   }
 
   .card-stats span {
-    font-size: 0.6rem;
+    font-size: var(--fs-xs);
   }
 
   .card-btn {
-    font-size: 0.6rem;
-    padding: 0.5rem;
+    font-size: var(--fs-xs);
+    padding: var(--space-xs);
   }
 
   .sec2-footer {
@@ -1475,7 +1535,7 @@ section.sec1 .text .page1 button:hover {
   }
 
   .hero {
-    padding: 1.5rem 1.2rem 2rem;
+    padding: 1.5rem 1.2rem var(--space-md);
     gap: 1.5rem;
   }
 
@@ -1483,12 +1543,12 @@ section.sec1 .text .page1 button:hover {
     width: 100%;
     position: sticky;
     top: 0;
-    background: #111;
-    padding-bottom: 0.5rem;
+    background: var(--bg-primary);
+    padding-bottom: var(--space-xs);
   }
 
   .hero-header h2 {
-    font-size: 1.2rem;
+    font-size: var(--fs-md);
     letter-spacing: 2px;
   }
 
@@ -1501,8 +1561,8 @@ section.sec1 .text .page1 button:hover {
     width: 100%;
     height: 70vh;
     flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+    padding: var(--space-sm);
+    gap: var(--space-sm);
     top: 11%;
   }
 
@@ -1517,7 +1577,7 @@ section.sec1 .text .page1 button:hover {
 
   .hero .explore .explore-content h2 {
     font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-xs);
   }
 
 }
