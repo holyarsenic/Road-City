@@ -22,11 +22,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: var(--text-primary);
   z-index: 100;
   background-color: transparent;
   backdrop-filter: blur(1px);
-  transition: all 1s ease;
+  transition: all var(--transition-xslow);
 }
 
 nav button {

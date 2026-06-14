@@ -13,67 +13,6 @@ body {
   color: white;
 }
 
-:root {
-  /*Colors*/
-  --bg-primary: #111;
-  --bg-secondary: #0a0a0a;
-  --text-primary: #ffffff;
-  --text-secondary: rgba(221, 219, 219, 0.8);
-  --text-muted: rgba(255, 255, 255, 0.18);
-  --accent: #ff8c00;
-
-  /*Border*/
-  --border-light: rgba(255, 255, 255, 0.1);
-  --border-medium: rgba(255, 255, 255, 0.2);
-  --border-dark: rgba(255, 255, 255, 0.08);
-
-  /*glass*/
-  --glass-bg: rgba(0, 0, 0, 0.4);
-  --glass-nav: rgba(0, 0, 0, 0.40);
-  --glass-menu: rgba(17, 17, 17, 0.85);
-  --glass-overlay: rgba(17, 17, 17, 0.8);
-
-  /*Radius*/
-  --radius-sm: 4px;
-  --radius-md: 10px;
-  --radius-lg: 12px;
-  --radius-xl: 20px;
-
-  /*Blur*/
-  --blur-sm: 4px;
-  --blur-md: 20px;
-  --blur-lg: 50px;
-
-  /*Transition*/
-  --transition-fast: 0.3s ease;
-  --transition-normal: 0.4s ease;
-  --transition-slow: 0.6s ease;
-  --transition-xslow: 1s ease;
-
-  /*Font Sizes*/
-  --fs-xs: 0.6rem;
-  --fs-sm: 0.8rem;
-  --fs-base: 1rem;
-  --fs-md: 1.2rem;
-  --fs-lg: 1.5rem;
-  --fs-xl: 2rem;
-  --fs-2xl: 3rem;
-  --fs-3xl: 4rem;
-  --fs-4xl: 5rem;
-
-  /*Spacing*/
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
-  --space-xl: 6rem;
-
-  /*Z Index*/
-  --z-nav: 100;
-  --z-menu: 90;
-  --z-overlay: 1000;
-}
-
 .main .intro {
   position: fixed;
   width: 100%;
