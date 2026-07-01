@@ -75,7 +75,7 @@ Run the project using **Live Server** or open `index.html` directly in your brow
 Add screenshots of the landing page inside the `Images` folder.
 
 ```md
-![Road City Preview](Images/preview.png)
+![Road City Preview](./Images/readme.png)
 ```
 
 ---
