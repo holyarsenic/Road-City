@@ -72,10 +72,8 @@ Run the project using **Live Server** or open `index.html` directly in your brow
 
 ## Preview
 
-Add screenshots of the landing page inside the `Images` folder.
-
 ```md
-![Road City Preview](./Images/readme.png)
+./Images/readme.png
 ```
 
 ---
@@ -132,19 +130,6 @@ git push origin feature-name
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
-
----
-
 ## Author
 
-**Rohan Kamat**
-
-- GitHub: https://github.com/your-username
-- LinkedIn: https://linkedin.com/in/your-profile
-
----
-
-If you found this project useful, consider giving it a star on GitHub.
+**holyarsenic**
