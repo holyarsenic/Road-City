@@ -1,116 +1,94 @@
-# Road City
+# Road-City
 
-A modern and responsive landing page built with **HTML**, **CSS**, and **JavaScript**. Road City delivers a clean user experience with smooth navigation, engaging visuals, and a fully responsive layout across desktop, tablet, and mobile devices.
+![GitHub stars](https://img.shields.io/github/stars/holyarsenic/Road-City?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/holyarsenic/Road-City?style=for-the-badge&logo=github) ![GitHub issues](https://img.shields.io/github/issues/holyarsenic/Road-City?style=for-the-badge&logo=github) ![Last commit](https://img.shields.io/github/last-commit/holyarsenic/Road-City?style=for-the-badge&logo=github)
 
-## Live Demo
+## 📑 Table of Contents
 
-https://road-city.vercel.app/
+- [Description](#description)
+- [Preview](#preview)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Contributors](#contributors)
+- [Contributing](#contributing)
 
----
+## 📝 Description
+
+RoadCity Travelling Site is the modern landing page
 
 ## Preview
 
-![Road City Preview](Images/readme.png)
+![Road City Preview](/Images/readme.png)
 
----
-
-## Overview
-
-Road City is a front-end web project focused on creating an attractive and user-friendly landing page. The project demonstrates responsive web design, structured layouts, reusable styling, and interactive JavaScript components.
-
-The website is designed to provide visitors with an engaging browsing experience while maintaining fast performance and accessibility.
-
----
-
-## Features
-
-- Modern and clean user interface
-- Fully responsive design
-- Interactive navigation
-- Smooth scrolling experience
-- Journey section
-- Contact section
-- Organized folder structure
-- Cross-browser compatibility
-- Optimized for desktop and mobile devices
-
----
-
-## Tech Stack
-
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- Vercel
-
----
-
-## Project Structure
-
-```text
-Road-City/
-│
-├── Images/
-├── index.html
-├── style.css
-├── script.js
-├── journey.html
-├── journey.css
-├── journey.js
-├── success.html
-├── theme.css
-└── README.md
-```
-
----
-
-## Getting Started
-
-### Clone the repository
+## ⚡ Quick Start
 
 ```bash
+
+# 1. Clone the repository
 git clone https://github.com/holyarsenic/Road-City.git
+
+# See the Development Setup section below
 ```
 
-### Navigate to the project
+## 📁 Project Structure
 
-```bash
-cd Road-City
+```
+.
+├── Images
+│   ├── Green Valley.jpg
+│   ├── Japan.jpg
+│   ├── Mountain Pass.jpg
+│   ├── Summer Highway.jpg
+│   ├── Tunnel Pass.jpg
+│   ├── car.jpg
+│   ├── driver.jpg
+│   ├── honk kong.jpg
+│   ├── london.jpg
+│   ├── marque.jpg
+│   ├── mountain.jpg
+│   ├── new york.jpg
+│   ├── paris.jpg
+│   ├── pic1.jpeg
+│   ├── pic2.jpeg
+│   ├── pic3.jpeg
+│   ├── pic4.jpeg
+│   ├── pic5.jpeg
+│   ├── pic6.jpeg
+│   ├── pic7.jpeg
+│   ├── pic8.jpeg
+│   ├── readme.png
+│   ├── video.mp4
+│   └── world-map.jpg
+├── index.html
+├── journey.css
+├── journey.html
+├── journey.js
+├── script.js
+├── style.css
+├── success.html
+└── theme.css
 ```
 
-### Run locally
+## 👥 Contributors
 
-Open `index.html` directly in your browser
+Thanks to everyone who has contributed to this project:
 
-or
+<p align="left">
+<a href="https://github.com/holyarsenic" title="holyarsenic"><img src="https://avatars.githubusercontent.com/u/253408897?v=4&s=64" width="64" height="64" alt="holyarsenic" style="border-radius:50%" /></a>
+</p>
 
-Use **VS Code Live Server** for the best development experience.
+[See the full list of contributors →](https://github.com/holyarsenic/Road-City/graphs/contributors)
 
----
+## 👥 Contributing
 
-## Responsive Design
+Contributions are welcome! Here's the standard flow:
 
-The landing page is designed to work seamlessly across:
+1. **Fork** the repository
+2. **Clone** your fork: `git clone https://github.com/holyarsenic/Road-City.git`
+3. **Branch**: `git checkout -b feature/your-feature`
+4. **Commit**: `git commit -m 'feat: add some feature'`
+5. **Push**: `git push origin feature/your-feature`
+6. **Open** a pull request
 
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
----
-
-## Deployment
-
-The project is deployed on **Vercel**.
-
-Live Website:
-https://road-city.vercel.app/
-
----
-
-## Author
-
-**holyarsenic**
-
+Please follow the existing code style and include tests for new behavior where applicable.
 
 ---
