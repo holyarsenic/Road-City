@@ -1,26 +1,41 @@
 # Road City
 
-A modern, responsive landing page designed to provide an engaging user experience with a clean interface, smooth interactions, and mobile-friendly design.
+A modern and responsive landing page built with **HTML**, **CSS**, and **JavaScript**. Road City delivers a clean user experience with smooth navigation, engaging visuals, and a fully responsive layout across desktop, tablet, and mobile devices.
 
-**Live Demo:** https://road-city.vercel.app/
+## Live Demo
+
+https://road-city.vercel.app/
+
+---
+
+## Preview
+
+
+```md
+![Road City Preview](/Images/readme.png)
+```
 
 ---
 
 ## Overview
 
-Road City is a front-end landing page built using HTML, CSS, and JavaScript. The project focuses on responsive layouts, modern UI design, and optimized performance across different screen sizes.
+Road City is a front-end web project focused on creating an attractive and user-friendly landing page. The project demonstrates responsive web design, structured layouts, reusable styling, and interactive JavaScript components.
+
+The website is designed to provide visitors with an engaging browsing experience while maintaining fast performance and accessibility.
 
 ---
 
 ## Features
 
-- Responsive design for all devices
 - Modern and clean user interface
-- Smooth scrolling and interactive elements
-- Mobile-friendly navigation
-- Organized project structure
-- Fast loading performance
-- Contact form integration
+- Fully responsive design
+- Interactive navigation
+- Smooth scrolling experience
+- Journey section
+- Contact section
+- Organized folder structure
+- Cross-browser compatibility
+- Optimized for desktop and mobile devices
 
 ---
 
@@ -29,13 +44,13 @@ Road City is a front-end landing page built using HTML, CSS, and JavaScript. The
 - HTML5
 - CSS3
 - JavaScript (ES6)
-- Vercel (Deployment)
+- Vercel
 
 ---
 
 ## Project Structure
 
-```
+```text
 Road-City/
 │
 ├── Images/
@@ -45,91 +60,60 @@ Road-City/
 ├── journey.html
 ├── journey.css
 ├── journey.js
-├── theme.css
 ├── success.html
+├── theme.css
 └── README.md
 ```
 
 ---
 
-## Installation
+## Getting Started
 
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/road-city.git
-```
-
-Navigate to the project directory:
+### Clone the repository
 
 ```bash
-cd road-city
+git clone https://github.com/holyarsenic/Road-City.git
 ```
 
-Run the project using **Live Server** or open `index.html` directly in your browser.
+### Navigate to the project
+
+```bash
+cd Road-City
+```
+
+### Run locally
+
+Open `index.html` directly in your browser
+
+or
+
+Use **VS Code Live Server** for the best development experience.
 
 ---
 
-## Preview
+## Responsive Design
 
-```md
-./Images/readme.png
-```
+The landing page is designed to work seamlessly across:
 
----
-
-## Future Improvements
-
-- Dark mode support
-- Improved animations
-- Enhanced accessibility
-- SEO optimization
-- Backend integration for the contact form
-- Performance improvements
+- Desktop
+- Laptop
+- Tablet
+- Mobile
 
 ---
 
-## What I Learned
+## Deployment
 
-During this project, I improved my understanding of:
+The project is deployed on **Vercel**.
 
-- Responsive Web Design
-- CSS Flexbox & Grid
-- JavaScript DOM Manipulation
-- Event Handling
-- UI/UX Design Principles
-- Project Structure
-- Deployment with Vercel
-
----
-
-## Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes
-
-```bash
-git commit -m "Add feature"
-```
-
-4. Push the branch
-
-```bash
-git push origin feature-name
-```
-
-5. Open a Pull Request
+Live Website:
+https://road-city.vercel.app/
 
 ---
 
 ## Author
 
 **holyarsenic**
+
+
+---
