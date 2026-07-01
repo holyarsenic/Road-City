@@ -10,10 +10,7 @@ https://road-city.vercel.app/
 
 ## Preview
 
-
-```md
-![Road City Preview](/Images/readme.png)
-```
+![Road City Preview](Images/readme.png)
 
 ---
 
